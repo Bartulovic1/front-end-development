@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Advanced CSS - Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animacija</title>
     <style>
-        a { color: green;}
-        a[href="https://www.link-group.eu/"]
-         {
-            color: red
-        }
 
-p:nth-child(even) {
-    color:red;
-}
-p:nth-child(odd)
-{
-    color: blue;
-}
 
-p:nth-child(10):hover {
-  font-style: italic;
+
+
+.veliki-krug {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fb5dad, #55fb9f, #b97aff; );
+  animation: rotacija 15s infinite linear; 
+  transform: translate(300px, 300px);
 }
 
+
+.veliki-krug::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #050210 ;
+}
+
+
+.veliki-krug::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(20px);
+}
+
+
+@keyframes rotacija {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
     </style>
 </head>
-
 <body>
-    <h1>Main Heading</h1>
-    <p>Paragraph 1</p>
-    <a href="https://www.google.com/">Google</a>
-    <a href="https://www.google.com/doodles">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
-    <div id="first-div">
-        <h2>Subheading</h2>
-        <p>Paragraph 2</p>
-        <p>Paragraph 3</p>
-        <div id="second-div">
-            <h3>Sub subheading</h3>
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-            <p>Paragraph 7</p>
-            <p>Paragraph 8</p>
-        </div>
-    </div>
-    <p>Paragraph 9</p>
-    <p>Paragraph 10</p>
-</body>
 
+    <div class="veliki-krug"></div>
+    
+</body>
 </html>

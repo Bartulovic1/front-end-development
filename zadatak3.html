@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style> 
+header {
+    text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.galerry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.row{
+  display:flex
+}
+
+.container {
+  width: 150px;
+  height: 100px;
+  margin: 15px;
+  border-radius: 10%;
+  background-color: #82b6ee; 
+  text-align:center;
+  align-items: center;
+  line-height:210px ;
+  display: flex;
+  opacity: 90%;
+}
+.container text {
+    position: absolute;
+  bottom: 14px;
+}
+.container::after {
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+.column {
+flex-basis: 33.33%;
+}
+}
+@media screen and (max-width: 768px) {
+.column {
+flex-basis: 50%;
+}
+}
+@media screen and (max-width: 414px) {
+.column {
+flex-basis: 100%; **
+}
+}
+
+
+</style>
+</head>
+
+<body>
+    <header id="GALERRY"> Gallery Heading </div>
+    <div class="gallery">
+        <div class="row">
+          <div class="container"> image  </div>
+          <div class="container">image </div>
+          <div class="container">image</div>
+          <div class="container">image </div>
+          <div class="container">image </div>
+        </div>
+        <div class="row">
+          <div class="container">image</div>
+          <div class="container">image</div>
+          <div class="container">image</div>
+          <div class="container">image</div>
+          <div class="container">image</div>
+        </div>
+      </div>
+
+<footer id="footer"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minus sunt, earum est doloribus doloremque officiis atque architecto, perspiciatis, aperiam suscipit inventore vitae voluptates maxime nihil dolor! Facere, sunt repudiandae cupiditate consequuntur ipsum autem modi quia. Sapiente, pariatur totam eveniet ad doloremque culpa quidem, sint explicabo ut, incidunt dolore minus!
+</div>
+
+
+</body>
+</html>
